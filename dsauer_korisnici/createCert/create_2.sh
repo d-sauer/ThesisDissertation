@@ -1,0 +1,1 @@
+keytool -export -rfc -keystore ./servIdentity.jks -alias tomcat -file ./tomcat.cer

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.4-b01-. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="cityInfo" type="tns:cityInfo"></xs:element>
+
+<xs:element name="cityInfoResponse" type="tns:cityInfoResponse"></xs:element>
+
+<xs:element name="cityWeather" type="tns:cityWeather"></xs:element>
+
+<xs:element name="cityWeatherResponse" type="tns:cityWeatherResponse"></xs:element>
+
+<xs:element name="listCityArchive" type="tns:listCityArchive"></xs:element>
+
+<xs:element name="listCityArchiveResponse" type="tns:listCityArchiveResponse"></xs:element>
+
+<xs:element name="searchCity" type="tns:searchCity"></xs:element>
+
+<xs:element name="searchCityResponse" type="tns:searchCityResponse"></xs:element>
+
+<xs:complexType name="cityData">
+<xs:sequence>
+<xs:element name="archived" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="city" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="county" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="errCode" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="error" type="xs:boolean" minOccurs="0"></xs:element>
+<xs:element name="lastupdate" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="latitude" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="longitude" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="state" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="substitute_zip" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="zipCode" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="archivedData">
+<xs:sequence>
+<xs:element name="errCode" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="error" type="xs:boolean" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="onDate" type="xs:dateTime" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cityInfo">
+<xs:sequence>
+<xs:element name="zip" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cityInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cityData" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listCityArchive">
+<xs:sequence>
+<xs:element name="zip" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listCityArchiveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCity">
+<xs:sequence>
+<xs:element name="zip" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="city" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="state" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="county" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hasArchive" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cityWeather">
+<xs:sequence>
+<xs:element name="zip" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="date" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cityWeatherResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:weatherData" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="weatherData">
+<xs:sequence>
+<xs:element name="currDesc" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="currIcon" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="date" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="errCode" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="error" type="xs:boolean" minOccurs="0"></xs:element>
+<xs:element name="humidity" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="humidityHigh" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="humidityLow" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="humidityUni" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="humidityUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="moonPhaseImage" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="pressure" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="pressureHigh" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="pressureLow" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="pressureUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="rainRate" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="rainRateMax" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="rainRateUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="rainToday" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="rainUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="substitute" type="xs:boolean" minOccurs="0"></xs:element>
+<xs:element name="substitute_ZIP" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="sunrise" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="sunset" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="temperature" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="temperatureHigh" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="temperatureLow" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="temperatureUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="timeZone" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="timeZoneOffset" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="windDirection" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="windSpeed" type="xs:float" minOccurs="0"></xs:element>
+<xs:element name="windSpeedUnit" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="ZIP" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

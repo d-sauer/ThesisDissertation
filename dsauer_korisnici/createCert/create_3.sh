@@ -1,0 +1,1 @@
+keytool -import -noprompt -trustcacerts -alias tomcat -file ./tomcat.cer -keystore /opt/SDK/jdk/jre/lib/security/cacerts

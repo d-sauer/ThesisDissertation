@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services/>
+  <clients>
+    <client name="korisnici">
+      <wsdl-url>https://localhost:8443/dsauer_korisnici/korisnici?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8443/dsauer_korisnici/korisnici.wsdl</local-wsdl-file>
+      <package-name>service</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>https://localhost:8443/dsauer_korisnici/korisnici?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="prognoze">
+      <wsdl-url>http://localhost:8084/dsauer_prognoze/prognoze?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8084/dsauer_prognoze/prognoze.wsdl</local-wsdl-file>
+      <package-name>service</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8084/dsauer_prognoze/prognoze?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+  </clients>
+  <jsr109>false</jsr109>
+</jax-ws>

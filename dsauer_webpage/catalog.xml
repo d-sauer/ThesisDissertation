@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://localhost:8443/dsauer_korisnici/korisnici?wsdl" uri="src/conf/xml-resources/web-service-references/korisnici/wsdl/localhost_8443/dsauer_korisnici/korisnici.wsdl"/>
+    <system systemId="https://localhost:8443/dsauer_korisnici/korisnici?xsd=1" uri="src/conf/xml-resources/web-service-references/korisnici/wsdl/localhost_8443/dsauer_korisnici/korisnici.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/dsauer_prognoze/prognoze?wsdl" uri="src/conf/xml-resources/web-service-references/prognoze/wsdl/localhost_8084/dsauer_prognoze/prognoze.wsdl"/>
+    <system systemId="http://localhost:8084/dsauer_prognoze/prognoze?xsd=1" uri="src/conf/xml-resources/web-service-references/prognoze/wsdl/localhost_8084/dsauer_prognoze/prognoze.xsd_1.xsd"/>
+</catalog>
+
+
+
+
+

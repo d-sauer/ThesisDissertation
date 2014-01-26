@@ -1,0 +1,17 @@
+0. pokrenuti skripte create_[1,2,3].sh
+
+1. editirati /var/lib/apache-tomcat-6.0.20/conf/server.xml
+
+2. dodat liniju ako ne postoji:
+	<Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+
+
+3. kopirati servIdentity.jks u /var/lib/apache-tomcat-6.0.20
+
+4. dodati ako ne postoji:
+	<Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+               maxThreads="150" scheme="https" secure="true" 
+			   acceptCount="100"
+               keystoreFile="servIdentity.jks" keystorePass="changeit"
+               clientAuth="false" sslProtocol="TLS" />
+

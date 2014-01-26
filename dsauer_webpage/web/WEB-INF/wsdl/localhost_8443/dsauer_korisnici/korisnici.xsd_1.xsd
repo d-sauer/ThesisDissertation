@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.5-hudson-$BUILD_NUMBER-. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="changeUserProperties" type="tns:changeUserProperties" />
+
+<xs:element name="changeUserPropertiesResponse" type="tns:changeUserPropertiesResponse" />
+
+<xs:element name="registerUser" type="tns:registerUser" />
+
+<xs:element name="registerUserResponse" type="tns:registerUserResponse" />
+
+<xs:element name="userAutentification" type="tns:userAutentification" />
+
+<xs:element name="userAutentificationResponse" type="tns:userAutentificationResponse" />
+
+<xs:complexType name="changeUserProperties">
+<xs:sequence>
+<xs:element name="userId" type="xs:int" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changeUserPropertiesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userData" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userData">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="errCode" type="xs:int" minOccurs="0" />
+<xs:element name="error" type="xs:boolean" minOccurs="0" />
+<xs:element name="firstName" type="xs:string" minOccurs="0" />
+<xs:element name="lastName" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+<xs:element name="userID" type="xs:int" minOccurs="0" />
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="userPass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerUser">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="userPass" type="xs:string" minOccurs="0" />
+<xs:element name="firstName" type="xs:string" minOccurs="0" />
+<xs:element name="lastName" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userData" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userAutentification">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="userPass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userAutentificationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userData" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
